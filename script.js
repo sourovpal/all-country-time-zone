@@ -1,3 +1,12 @@
+
+
+function convertTZ(date, tzString) {
+    return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
+}
+
+
+
+
 const timeZones = [
   'Europe/Andorra',
   'Asia/Dubai',
@@ -353,3 +362,4 @@ timeZones.forEach(timeZone => {
   const date = new Date()
   console.log(convertTZ(date, timeZone), '======'+timeZone)
 })
+
